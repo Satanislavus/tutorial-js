@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-li-element-on-click</title>
+    <style>
+        li {color: black}
+        .big {color: red}
+
+    </style>
+</head>
+
+<body>
+    <button>dodaj liczbę</button>
+    <script>
+        let counter = 1
+        const btn=document.querySelector("button")
+        const addElement=function(){
+            const bulletPoint=document.createElement("li")
+            bulletPoint.textContent=counter
+                if (counter%3==0){
+                    bulletPoint.classList.add("big")
+                }
+
+            counter+=2
+            document.body.appendChild(bulletPoint)
+        }
+
+        btn.onclick=addElement
+
+    </script>    
+</body>
+
+</html>

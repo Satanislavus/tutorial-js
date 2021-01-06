@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Element on Click</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        body button {
+            display: block;
+            background-color: burlywood;
+            color: black;
+            font-weight: bolder;
+            width: 150px;
+            height: 40 px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        div {
+            background-color: black;
+            color: blanchedalmond;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            text-align: center;
+            float: left;
+            margin: 5px 0px 5px 5px;
+        }
+
+        .circle {
+            background: blanchedalmond;
+            border-radius: 50%;
+            color: black;
+            
+        }
+        
+    </style>
+
+</head>
+<body>
+    <button>Dodaj element</button>
+    <script>
+        const btn=document.querySelector("button")
+        let counter=1
+        let circleCounter=1
+
+        const addElement = function () {
+            const div=document.createElement('div');
+            div.textContent=counter;
+           
+            if (circleCounter==5){
+                circleCounter=0,
+                div.classList.add("circle")
+            }
+         
+            document.body.appendChild(div);
+            counter++;
+            circleCounter++;
+        }
+            
+        
+        btn.addEventListener("click", addElement)
+    </script>
+</body>
+</html>
