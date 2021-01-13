@@ -15,30 +15,18 @@ const div=document.createElement("div")
 document.body.appendChild(div)
 
 
-
-
 const changeHeight= function(){
    
     if (size >= window.innerHeight/2) {
         grow=false
-    }
-
-        else if (size < 0) {
-            grow=true
-        }
-
+    } else if (size < 0) {
+        grow=true}
 
     if (grow) {
-        size +=40
-        
-        div.style.backgroundColor="green"
-    }
-
-        else {
-            size -=40
-            
-            div.style.backgroundColor = "red"    
-        }
+        size +=40      
+        div.style.backgroundColor="green" } else {
+        size -=40
+        div.style.backgroundColor = "red"}
     
     div.style.height=size + "px"
 }
