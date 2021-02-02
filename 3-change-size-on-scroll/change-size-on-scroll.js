@@ -23,9 +23,9 @@ const changeHeight= function(){
         grow=true}
 
     if (grow) {
-        size +=40      
+        size +=2      
         div.style.backgroundColor="green" } else {
-        size -=40
+        size -=2
         div.style.backgroundColor = "red"}
     
     div.style.height=size + "px"
